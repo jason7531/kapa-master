@@ -6,7 +6,6 @@ import { notify } from "../reducers/notificationReducer";
 import MobileUserMenu from "./MobileUserMenu";
 import DesktopUserMenu from "./DesktopUserMenu";
 import SearchBar from "./SearchBar";
-import { ReactComponent as KapaIcon } from "../svg/kapa.svg";
 
 import {
   AppBar,
@@ -49,7 +48,6 @@ const NavBar = () => {
                   color="primary"
                   component={RouterLink}
                   to="/"
-                  startIcon={<KapaIcon />}
                   size="large"
                 >
                   kapa

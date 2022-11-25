@@ -122,7 +122,6 @@ const AddPostForm = ({
       >
         {({ isSubmitting, values, setFieldValue }) => (
           <Form className={classes.form}>
-            {" "}
             {actionType !== "edit" && (
               <ButtonGroup
                 color="secondary"
@@ -136,8 +135,8 @@ const AddPostForm = ({
                   }
                 >
                   <TextFormatIcon style={{ marginRight: 2 }} />
-                  Text{" "}
-                </Button>{" "}
+                  Text
+                </Button>
                 <Button
                   onClick={() => setFieldValue("postType", "Image")}
                   variant={
@@ -145,8 +144,8 @@ const AddPostForm = ({
                   }
                 >
                   <ImageIcon style={{ marginRight: 5 }} />
-                  Image{" "}
-                </Button>{" "}
+                  Image
+                </Button>
                 <Button
                   onClick={() => setFieldValue("postType", "Link")}
                   variant={
@@ -154,10 +153,10 @@ const AddPostForm = ({
                   }
                 >
                   <LinkIcon style={{ marginRight: 5 }} />
-                  Link{" "}
-                </Button>{" "}
+                  Link
+                </Button>
               </ButtonGroup>
-            )}{" "}
+            )}
             <div className={classes.input}>
               <Typography
                 className={classes.inputIconText}
@@ -165,7 +164,7 @@ const AddPostForm = ({
                 variant="h5"
               >
                 r /
-              </Typography>{" "}
+              </Typography>
               <Autocomplete
                 name="subreddit"
                 onChange={(e, value) =>
@@ -191,8 +190,8 @@ const AddPostForm = ({
                     disabled={actionType === "edit" || !!fromSubreddit}
                   />
                 )}
-              />{" "}
-            </div>{" "}
+              />
+            </div>
             <div className={classes.input}>
               <TitleIcon className={classes.inputIcon} color="primary" />
               <TextInput
@@ -203,8 +202,8 @@ const AddPostForm = ({
                 required
                 fullWidth
                 disabled={actionType === "edit"}
-              />{" "}
-            </div>{" "}
+              />
+            </div>
             {values.postType === "Text" && (
               <div className={classes.textInput}>
                 <ChatIcon className={classes.inputIcon} color="primary" />
@@ -218,9 +217,9 @@ const AddPostForm = ({
                   variant="outlined"
                   rows={4}
                   maxRows={Infinity}
-                />{" "}
+                />
               </div>
-            )}{" "}
+            )}
             {values.postType === "Image" && (
               <div className={classes.imageInput}>
                 <div className={classes.imageBtnsWrapper}>
@@ -232,7 +231,7 @@ const AddPostForm = ({
                     hidden
                     onChange={(e) => fileInputOnChange(e, setFieldValue)}
                     required={values.postType === "Image"}
-                  />{" "}
+                  />
                   <Button
                     component="label"
                     htmlFor="image-upload"
@@ -251,8 +250,8 @@ const AddPostForm = ({
                   >
                     {values.imageSubmission
                       ? `${isMobile ? "" : "Selected "}"${fileName}"`
-                      : `Select Image`}{" "}
-                  </Button>{" "}
+                      : `Select Image`}
+                  </Button>
                   {values.imageSubmission && (
                     <IconButton
                       onClick={() => clearFileSelection(setFieldValue)}
@@ -262,19 +261,19 @@ const AddPostForm = ({
                     >
                       <CancelIcon />
                     </IconButton>
-                  )}{" "}
-                </div>{" "}
+                  )}
+                </div>
                 {values.imageSubmission && (
                   <div className={classes.imagePreview}>
                     <img
                       alt={fileName}
                       src={values.imageSubmission}
                       width={isMobile ? 250 : 350}
-                    />{" "}
+                    />
                   </div>
-                )}{" "}
+                )}
               </div>
-            )}{" "}
+            )}
             {values.postType === "Link" && (
               <div className={classes.input}>
                 <LinkIcon className={classes.inputIcon} color="primary" />
@@ -286,9 +285,9 @@ const AddPostForm = ({
                   required={values.postType === "Link"}
                   fullWidth
                   variant={actionType === "edit" ? "outlined" : "standard"}
-                />{" "}
+                />
               </div>
-            )}{" "}
+            )}
             <Button
               type="submit"
               color="secondary"
@@ -304,16 +303,16 @@ const AddPostForm = ({
                   : "Update"
                 : isSubmitting
                 ? "Posting"
-                : "Post"}{" "}
-            </Button>{" "}
+                : "Post"}
+            </Button>
           </Form>
-        )}{" "}
-      </Formik>{" "}
+        )}
+      </Formik>
       <AlertMessage
         error={error}
         severity="error"
         clearError={() => setError(null)}
-      />{" "}
+      />
     </div>
   );
 };
