@@ -115,7 +115,7 @@ const UserPage = () => {
             <div className={classes.itemWrapper}>
               <div className={classes.twoItemsDiv}>
                 <Typography variant="body1" color="secondary">
-                  Cake Day
+                  Joined on
                 </Typography>
                 <Typography
                   variant="h6"
