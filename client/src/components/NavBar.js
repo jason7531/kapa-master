@@ -16,6 +16,7 @@ import {
   useMediaQuery,
   IconButton,
   Icon,
+  Avatar,
 } from "@material-ui/core";
 import { useNavStyles } from "../styles/muiStyles";
 import { useTheme } from "@material-ui/core/styles";
@@ -48,6 +49,13 @@ const NavBar = () => {
                   color="primary"
                   component={RouterLink}
                   to="/"
+                  startIcon={
+                    <Avatar
+                      src={
+                        "https://ik.imagekit.io/jason7531/KaPa_93oga4JfK.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669398982326"
+                      }
+                    />
+                  }
                   size="large"
                 >
                   kapa
